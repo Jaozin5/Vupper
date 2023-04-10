@@ -4,3 +4,5 @@ O Vupper tem como objetivo, facilitar a procura de transportes escolares para in
 através de um aplicativo destinado para celulares e auxiliar na procura de clientes para os motoristas. 
 O projeto busca sanar a problemática da dificuldade crescente de procura por motoristas nesse ramo escolar.
 Ele foi programado em um aplicativo chamado “Android Studio”, um software especializado em criação de aplicativos para celulares. 
+
+*** O aplicativo não está finzalizado ***
