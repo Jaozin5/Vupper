@@ -43,6 +43,7 @@ public class DadosPerfilMotorista extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), DadosVan.class);
+                intent.putExtra("FotoMoto", String.valueOf(imageViewFotoPerfil));
                 startActivity(intent);
             }
         });

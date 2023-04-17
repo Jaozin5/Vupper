@@ -3,7 +3,6 @@ package com.example.vupper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.viewmodel.CreationExtras;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,49 +14,30 @@ import android.widget.Toast;
 
 public class DadosVan extends AppCompatActivity {
 
-    ImageView[] fotos = new ImageView[4];
+    public ImageView fotos;
     public ImageView fotoVan1, fotoVan2, fotoVan3, fotoVan4;
+    Button btnProxTela;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dados_van);
 
+        btnProxTela = findViewById(R.id.buttonContinuarProxTela);
 
-        fotos[0] = findViewById(R.id.imageViewFotoVan1);
-        fotos[1] = findViewById(R.id.imageViewFotoVan2);
-        fotos[2] = findViewById(R.id.imageViewFotoVan3);
-        fotos[3] = findViewById(R.id.imageViewFotoVan4);
-
-
-        fotos[0].setOnClickListener(new View.OnClickListener() {
+        btnProxTela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                escolherFotoVan();
+                Intent proxTela = new Intent(DadosVan.this, ConfigRotasMoto.class);
+                startActivity(proxTela);
 
             }
         });
 
-        fotos[1].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        fotos = findViewById(R.id.imageViewFotoVan1);
 
-                escolherFotoVan();
-
-            }
-        });
-
-        fotos[2].setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                escolherFotoVan();
-
-            }
-        });
-
-        fotos[3].setOnClickListener(new View.OnClickListener() {
+        fotos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -83,13 +63,8 @@ public class DadosVan extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK && requestCode == 1000){
-            int c = 0;
-            if (c == 0){
-                fotos[c].setImageURI(data.getData());
-            }
 
-            fotos[c].setImageURI(data.getData());
-            c++;
+            fotos.setImageURI(data.getData());
 
         }
     }
