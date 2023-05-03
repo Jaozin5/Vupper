@@ -46,7 +46,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPlacaVan"
+        app:layout_constraintTop_toBottomOf="@+id/inputCelUser"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -171,7 +171,7 @@
 
 
     <com.santalu.maskara.widget.MaskEditText
-        android:id="@+id/inputPlacaVan"
+        android:id="@+id/inputCelUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"

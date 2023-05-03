@@ -5,21 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#808080"
-    android:foregroundTint="#000000"
-    tools:context=".MedidaSeguranca_CPF_Motorista">
+    tools:context=".Medida_seguranca_cpf_user">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="84dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="3dp"
+    <Button
+        android:id="@+id/buttonProx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#000000"
+        android:text="Próximo"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logovupper" />
+        app:layout_constraintTop_toBottomOf="@+id/inputCPFUser" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -36,8 +38,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView20"
-        android:layout_width="396dp"
+        android:id="@+id/textView35"
+        android:layout_width="390dp"
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
         android:text="Insira o seu CPF para concluir a verificação:"
@@ -46,12 +48,20 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="84dp"
+        android:layout_height="74dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logovupper" />
 
     <com.santalu.maskara.widget.MaskEditText
-        android:id="@+id/inputCPFmotorista"
+        android:id="@+id/inputCPFUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -65,24 +75,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView35"
         app:mask="___.___.___-__"
         app:maskCharacter="_"
         app:maskStyle="completable"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/buttonProx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#000000"
-        android:text="Próximo"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputCPFmotorista" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
