@@ -45,8 +45,6 @@ public class FormCadastro extends AppCompatActivity {
         });
 
 
-
-
     }
 
     private void IniciarComponentes(){

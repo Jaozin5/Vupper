@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class TelaLoginUser extends AppCompatActivity {
-    Button botaoVoltaTelaInicial;
+    Button botaoVoltarTelaInicial;
 
-    private TextView text_tela_cadastro_user;
+    private TextView textClickCadUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +19,10 @@ public class TelaLoginUser extends AppCompatActivity {
         setContentView(R.layout.activity_tela_login_user);
 
 
-        IniciarComponente();
+        IniciarComponentes();
 
-        botaoVoltaTelaInicial = findViewById(R.id.buttonVoltarInicial);
-        botaoVoltaTelaInicial.setOnClickListener(new View.OnClickListener() {
+        botaoVoltarTelaInicial = findViewById(R.id.buttonVoltaInicial);
+        botaoVoltarTelaInicial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -31,17 +31,16 @@ public class TelaLoginUser extends AppCompatActivity {
             }
         });
 
-        text_tela_cadastro_user.setOnClickListener(new View.OnClickListener() {
+        textClickCadUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent telaCadastroMotorista = new Intent(TelaLoginUser.this, FormCadastro.class);
-                startActivity(telaCadastroMotorista);
+                Intent telaCadastro = new Intent(TelaLoginUser.this, FormCadastroUser.class);
+                startActivity(telaCadastro);
             }
         });
-
     }
 
-    private void IniciarComponente(){
-        text_tela_cadastro_user = findViewById(R.id.textCadastroUsuario);
+    private void IniciarComponentes(){
+        textClickCadUser = findViewById(R.id.textCadastroUser);
     }
 }

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Form_cadastro_user extends AppCompatActivity {
+public class FormCadastroUser extends AppCompatActivity {
 
     private TextView textViewVoltarCadUser;
 
@@ -24,7 +24,7 @@ public class Form_cadastro_user extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent voltaCadUser = new Intent(Form_cadastro_user.this , TelaLoginUser.class);
+                Intent voltaCadUser = new Intent(FormCadastroUser.this , TelaLoginUser.class);
                 startActivity(voltaCadUser);
             }
         });

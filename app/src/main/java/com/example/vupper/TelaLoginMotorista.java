@@ -21,7 +21,7 @@ public class TelaLoginMotorista extends AppCompatActivity {
 
         IniciarComponentes();
 
-        botaoVoltaTelaInicial = findViewById(R.id.buttonVoltarInicial);
+        botaoVoltaTelaInicial = findViewById(R.id.buttonVoltaInicial);
         botaoVoltaTelaInicial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +41,6 @@ public class TelaLoginMotorista extends AppCompatActivity {
     }
 
     private void IniciarComponentes(){
-            text_tela_cadastro_motorista = findViewById(R.id.textCadastroMotorista);
-        }
+        text_tela_cadastro_motorista = findViewById(R.id.textCadastroMotorista);
     }
+}
