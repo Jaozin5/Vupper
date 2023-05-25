@@ -2,6 +2,7 @@ package com.example.vupper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,36 +12,35 @@ import android.widget.TextView;
 public class TelaLoginUser extends AppCompatActivity {
     Button botaoVoltarTelaInicial;
 
-    private TextView textClickCadUser;
+    Button botaoCriarContaUser;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_login_user);
 
 
-        IniciarComponentes();
+        //IniciarComponentes();
 
         botaoVoltarTelaInicial = findViewById(R.id.buttonVoltaInicial);
         botaoVoltarTelaInicial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent telaLogin = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(telaLogin);
             }
         });
 
-        textClickCadUser.setOnClickListener(new View.OnClickListener() {
+        botaoCriarContaUser= findViewById(R.id.buttonCriarContaUser);
+        botaoCriarContaUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent telaCadastro = new Intent(TelaLoginUser.this, FormCadastroUser.class);
-                startActivity(telaCadastro);
+                Intent criarContaUser = new Intent(getApplicationContext(), FormCadastroUsuario.class);
+                startActivity(criarContaUser);
             }
         });
     }
 
-    private void IniciarComponentes(){
-        textClickCadUser = findViewById(R.id.textCadastroUser);
-    }
+
 }

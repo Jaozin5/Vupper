@@ -14,28 +14,12 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/textCadastroUser"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCriarContaUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLoginUser"
-        app:layout_constraintVertical_bias="0.48" />
-
-
-
-    <TextView
-        android:id="@+id/textCadastroUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Crie uma conta clicando aqui!"
-        android:textAlignment="center"
-        android:textColor="#00ECFF"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVoltaInicial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLoginUser" />
+
 
     <Button
         android:id="@+id/buttonVoltaInicial"
@@ -147,4 +131,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logovupper" />
+
+    <Button
+        android:id="@+id/buttonCriarContaUser"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:background="#00FFFFFF"
+        android:text="Crie uma conta clicando aqui!"
+        android:textAlignment="center"
+        android:textColor="#3CE9FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVoltaInicial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
