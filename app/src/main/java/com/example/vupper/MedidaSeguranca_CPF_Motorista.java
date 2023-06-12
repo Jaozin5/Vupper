@@ -25,6 +25,8 @@ public class MedidaSeguranca_CPF_Motorista extends AppCompatActivity {
             public void onClick(View view) {
                 Intent proxTela = new Intent(getApplicationContext(), DadosPerfilMotorista.class);
                 startActivity(proxTela);
+
+                
             }
         });
 

@@ -43,7 +43,7 @@ public class DadosPerfilUser extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent continuarUser = new Intent(getApplicationContext(), DadosUsuario.class);
-                continuarUser.putExtra("FotoMoto", String.valueOf(imageViewFotoPerfilUser));
+                continuarUser.putExtra("FotoUser", String.valueOf(imageViewFotoPerfilUser));
                 startActivity(continuarUser);
             }
         });
